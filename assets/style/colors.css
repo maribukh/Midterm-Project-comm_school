@@ -10,6 +10,7 @@
     --color-blue-200: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
     --color-orange-100: #FF9017;
 
+    /* sorted */
     --primary-color: var(--color-blue-100);
     --primary-gradient-color: var(--color-blue-200);
     --white-color: var(--color-white-100);
