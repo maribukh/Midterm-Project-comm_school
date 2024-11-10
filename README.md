@@ -10,6 +10,7 @@ This project is a responsive web page built with HTML, CSS, and JavaScript, desi
 - **Responsive Design**: Adapts to different screen sizes for an optimal viewing experience.
 - **Dynamic Product List**: Fetches product data from the server at [https://dummyjson.com/products](https://dummyjson.com/products).
 - **Optional Elements**: Parts of the design marked with a red "X" are optional and do not require implementation.
+- **Figma file**: https://www.figma.com/design/0ZA3AcHP8hHALuZk3UdB0Y/Ecommerce-interface-(web-%26-mobile)-(Community)?node-id=229-7254&node-type=frame&t=XiH0CFPoW2TVOCd8-0
 
 ## Technologies Used
 - **HTML**
@@ -20,8 +21,3 @@ This project is a responsive web page built with HTML, CSS, and JavaScript, desi
 
 ### Prerequisites
 To run this project, you'll need a code editor (such as Visual Studio Code) and a basic setup to run HTML/CSS/JavaScript.
-
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository_url>
