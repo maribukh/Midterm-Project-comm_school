@@ -8,10 +8,6 @@ body {
     font-family: "Inter";
 }
 
-input {
-    font-family: "Inter";
-}
-
 a {
     text-decoration: none;
   }
@@ -19,3 +15,73 @@ a {
 ul {
     list-style-type: none;
   }
+
+  .container {
+    max-width: 1440px;
+    width    : 100%;
+  }
+
+  .web-gridview {
+    width: 100%;
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+
+  ul {
+    display: flex; 
+    padding: 0;
+    margin: 0;
+}
+
+.search {
+    width: 100%;
+    max-width: 665px;
+    height: 100%;
+    border: 1px;
+
+
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    margin-left: 46px;
+}
+
+.search input[type="search"],
+.search select,
+.search button {
+    font-family: inherit; 
+    font-size: inherit;
+    text-transform: capitalize;
+}
+
+.search input[type="search"] {
+    width: 63%;
+    max-width: 421px;
+    padding: 10px 5px 10px 10px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+
+}
+
+
+.user-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+
+    margin-left: 89px;
+}
+
+.user-dashboard li {
+    margin-left: 23px;
+
+    width: 37px;
+    height: 41px;
+
+
+}
