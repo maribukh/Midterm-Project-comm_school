@@ -12,7 +12,7 @@
 <body>
   <div class="web-gridview">
   <header>
-    <div class="header-alibaba">
+    <nav class="header-alibaba">
       <ul>
         <li><a href="#"><img src="./assets/images/logo/logo-colored.svg" alt="Logo"></a></li>
         
@@ -20,14 +20,17 @@
         <li class="search">
           <input type="search" placeholder="search"/>
           <form>
-            <select>
-              <option>all category</span></option>
-              <option>mobile accessory</option>
-              <option>electronics</option>
-              <option>smartphones</option>
-              <option>modern tech</option>
-            </select>
+            <div class="custom-select">
+              <select>
+                <option>all category</option>
+                <option>mobile accessory</option>
+                <option>electronics</option>
+                <option>smartphones</option>
+                <option>modern tech</option>
+              </select>
+            </div>
           </form>
+          
           <button>search</button>
         </li>
 
@@ -36,11 +39,78 @@
           <a href="#"><img src="./assets/icons/profile_vector.svg" alt="Profile">profile</a>
           <a href="#"><img src="./assets/icons/message_vector.svg" alt="Message">message</a>
           <a href="#"><img src="./assets/icons/orders_vector.svg" alt="Orders">orders</a>
-          <a href="#"><img src="./assets/icons/cart.svg" alt="Cart">cart</a>
+          <a href="#"><img src="./assets/icons/cart.svg" alt="Cart">my cart</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
+  <aside class="slide-bar">
+    <ul class="category">
+      <li class="title-h6">
+        <h6>category</h6>
+        <img src="./assets/icons/expand_less.svg">
+      </li>
+      <li class="text-base">mobile accessory</li>
+      <li class="text-base">electronics</li>
+      <li class="text-base">smartphones</li>
+      <li class="text-base">modern tech</li>
+      <li class="text-base-1">see all</li>
+    </ul>
+    <ul class="brands">
+      <li class="title-h6">
+        <h6>brands</h6>
+        <img src="./assets/icons/expand_less.svg"></li>
+     <li class="text-base">
+      <input type="checkbox" id="samsung" name="samsung">
+      <label  for="samsung">samsung</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="apple" name="apple">
+      <label  for="apple">apple</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="huawei" name="huawei">
+      <label  for="huawei">huawei</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="pocco" name="pocco">
+      <label  for="pocco">pocco</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="lenovo" name="lenovo">
+      <label  for="lenovo">lenovo</label>
+     </li>
+     <li class="text-base-1">see all</li>
+    </ul>
+    <ul class="features">
+      <li class="title-h6">
+        <h6>features</h6>
+        <img src="./assets/icons/expand_less.svg">
+      </li>
+     <li class="text-base">
+      <input type="checkbox" id="metalic" name="metalic">
+      <label  for="metalic">metalic</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="plastic cover" name="plastic cover">
+      <label  for="plastic cover">plastic cover</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="8GB Ram" name="8GB Ram">
+      <label  for="8GB Ram">8GB Ram</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="super power" name="super power">
+      <label  for="super power">super power</label>
+     </li>
+     <li class="text-base">
+      <input type="checkbox" id="large memory" name="large memory">
+      <label  for="large memory">large memory</label>
+     </li>
+     <li class="text-base-1">see all</li>
+    </ul>
+
+  </aside>
   <script src="./assets/javascript/data.js"></script>
 </div>
 </body>
