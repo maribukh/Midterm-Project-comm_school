@@ -154,11 +154,11 @@ aside  {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 151px
+    gap: 206px;
   }
 
-  .title-h6 li img {
-    margin-left: 0%;
+  .title-h6  img {
+    cursor: pointer;
   }
 
   .text-base {
