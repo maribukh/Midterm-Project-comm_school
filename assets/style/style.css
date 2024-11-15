@@ -121,7 +121,7 @@ h6 {
 .user-dashboard {
     display: flex;
     align-items: center;
-    gap: 23px; 
+    gap: 18px; 
     font-size: 12px;
     margin-left: 89px;
     margin-right: 132px;
@@ -312,14 +312,14 @@ aside  {
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
-
+    margin-right: 243px ;
     text-wrap: nowrap;
 
     color: var(--color-dark-100)
 }
 
 .content-top input {
-    margin-left: 243px ;
+    /* margin-left: 243px ; */
 
 
 }
@@ -374,6 +374,10 @@ div .sort-columns {
 
 }
 
+div .filters-applied {
+ 
+}
+
 .filters-applied ul {
     display: flex; 
     flex-direction: row;
@@ -395,4 +399,5 @@ div .sort-columns {
     background-color: var(--color-white-100);
     cursor: pointer;
     text-align: center;
+    background: url("./") no-repeat center left;
 }
