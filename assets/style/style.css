@@ -31,21 +31,23 @@ h6 {
     color: var(--color-dark-100);
 
 }
-.container {
+/* .container {
     max-width: 1440px;
-    /* width: 100%; */
-    margin: 0 auto;
-    padding: 0 132px;
-}
-
-.web-gridview {
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 132px;
+} */
+
+.web-gridview {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0 132px; */
     background-color: var(--color-gray-100);
 }
 
 .header-alibaba {
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -171,13 +173,13 @@ aside  {
     /* gap: 206px; */
   }
 
-  .title-h6  img {
+.title-h6  img {
     cursor: pointer;
     position: absolute;
     left: 344px;
   }
 
-  .text-base {
+.text-base {
    /* height: 36px; */
    /* margin-bottom: 17px; */
    font-size: 16px !important;
@@ -195,14 +197,14 @@ aside  {
 
   }
 
-  .category .text-base {
+.category .text-base {
     margin-bottom: 17px;
   }
-  .brands .text-base {
+.brands .text-base {
     margin-bottom: 17px;
   }
 
-  .features .text-base {
+.features .text-base {
     margin-bottom: 17px;
   } 
 
@@ -259,13 +261,15 @@ aside  {
 }
 
 .content-top {
-    display: flex; 
-    flex-grow: 1; 
     width: 100%; 
+
+    display: flex; 
+    flex-direction: column;
+    flex-grow: 1; 
 }
   
 
-    .content-top .text-base {
+.content-top .text-base {
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -273,12 +277,12 @@ aside  {
 
   }
   
-  .content-top .select-box select {
+.content-top .select-box select {
     padding: 5px;
     font-size: 16px;
   }
   
-  .content-top img {
+.content-top img {
     cursor: pointer;
   }
 
@@ -293,7 +297,7 @@ aside  {
 }
 
 .content-top ul {
-    width: 100%;
+    min-width: 965px;
     max-height: 62px;
    
     padding:  23px 10px 20px 20px;
@@ -370,4 +374,25 @@ div .sort-columns {
 
 }
 
+.filters-applied ul {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 10px;
+    padding: 10px;
+}
 
+.filter {
+    display: flex;
+    gap: 10px; 
+    margin: none;
+}
+
+.filters-applied input[type="button"] {
+    padding: 8px 16px;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 6px;
+    background-color: var(--color-white-100);
+    cursor: pointer;
+    text-align: center;
+}
