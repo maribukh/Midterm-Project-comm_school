@@ -12,7 +12,7 @@
 <body>
   <div class="web-gridview">
   <header>
-    <nav class="header-alibaba">
+    <div class="header-alibaba">
       <ul>
         <li><a href="#"><img src="./assets/images/logo/logo-colored.svg" alt="Logo"></a></li>
         
@@ -38,11 +38,11 @@
         <li class="user-dashboard">
           <a href="#"><img src="./assets/icons/profile_vector.svg" alt="Profile">profile</a>
           <a href="#"><img src="./assets/icons/message_vector.svg" alt="Message">message</a>
-          <a href="#"><img src="./assets/icons/orders_vector.svg" alt="Orders">orders</a>
+          <a href="#"><img class="orders" src="./assets/icons/orders_vector.svg" alt="Orders">orders</a>
           <a href="#"><img src="./assets/icons/cart.svg" alt="Cart">my cart</a>
         </li>
       </ul>
-    </nav>
+    </div>
   </header>
   <div class="main-container">
   <aside class="slide-bar">
@@ -74,8 +74,8 @@
       <label  for="huawei">huawei</label>
      </li>
      <li class="text-base">
-      <input type="checkbox" id="pocco" name="pocco">
-      <label  for="pocco">pocco</label>
+      <input type="checkbox" id="poco" name="poco">
+      <label  for="poco">poco</label>
      </li>
      <li class="text-base">
       <input type="checkbox" id="lenovo" name="lenovo">
@@ -118,6 +118,7 @@
         <input type="checkbox" id="Verified only" name="Verified only">
         <label  for="Verified only">Verified only</label>
       </li>
+      <div class="group-1"></div>
       <li class="text-base"> 
         <form>
         <div class="select-box">
@@ -127,14 +128,35 @@
         </div>
       </form>
     </li>
-    <li class="sort-4th">
+    <div class="sort-4th">
+      <li>
       <img src="./assets/icons/sort-4th.svg">
-    </li>
-    <li class="sort-columns">
-      <img src="./assets/icons/sort-columns.svg">
-    </li>
+      </li>
+    </div>
+    <div class="sort-columns">
+      <li>
+        <img src="./assets/icons/sort-columns.svg">
+      </li>
+    </div>
     </ul>
   </div>
+</div>
+<div class="filters-applied">
+  <ul>
+    <li>
+      <form>
+        <input type="button" value="Samsung" />
+        <input type="button" value="Apple" />
+        <input type="button" value="Poco" />
+        <input type="button" value="Metallic" />
+        <input type="button" value="4 star" />
+        <input type="button" value="3 star" />
+      </form>  
+    </li>
+    <li class="text-base-1">
+      <p>Clear all filter</p>
+    </li>
+  </ul>
 </div>
   <script src="./assets/javascript/data.js"></script>
 </div>
