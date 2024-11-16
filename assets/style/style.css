@@ -19,6 +19,7 @@ ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    justify-content:space-between ;
     padding: 0;
 }
 
@@ -31,15 +32,9 @@ h6 {
     color: var(--color-dark-100);
 
 }
-/* .container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 132px;
-} */
 
 .web-gridview {
-    max-width: 1440px;
+    min-width: 1440px;
     width: 100%;
     margin: 0 auto;
     /* padding: 0 132px; */
@@ -58,9 +53,8 @@ h6 {
 }
 
 .search {
-    max-width: 665px;
+    max-width: 100%;
     background-color: var(--color-white-100);
-    border: 1px solid var(--primary-color); 
     border-radius: 6px;
     text-transform: capitalize;
     display: flex;
@@ -91,7 +85,7 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 145px;
+    max-width: 145px;
     cursor: pointer;
     text-align: left;
 
@@ -297,7 +291,7 @@ aside  {
 }
 
 .content-top ul {
-    min-width: 965px;
+    max-width: 965px;
     max-height: 62px;
    
     padding:  23px 10px 20px 20px;
@@ -357,6 +351,13 @@ aside  {
 
 }
 
+.group-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 div .sort-columns {
     min-width: 38px;
     min-height: 40px;
@@ -374,30 +375,57 @@ div .sort-columns {
 
 }
 
-div .filters-applied {
- 
+.tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+    
 }
 
-.filters-applied ul {
+.filters-applied li {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap; 
-    gap: 10px;
-    padding: 10px;
 }
 
-.filter {
+.filters-applied ul {
+    background-color: var(--color-gray-100);
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.filters-applied button  {
+    width: 100%;
     display: flex;
-    gap: 10px; 
-    margin: none;
-}
-
-.filters-applied input[type="button"] {
-    padding: 8px 16px;
-    border: 1px solid var(--color-gray-300);
+    justify-content: center;
+    align-items: center;
+    padding: 6.5px 10px 6.5px 10px;
+    border: 1px solid var(--primary-color);
     border-radius: 6px;
+    font-size: 16px !important;
+   font-weight: 400;
+   line-height: 19.36px;
+   text-align: left;
+    color: var(--color-gray-600);
     background-color: var(--color-white-100);
+    text-wrap: nowrap;
     cursor: pointer;
     text-align: center;
-    background: url("./") no-repeat center left;
+
+}
+
+.filters-applied img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 13px;
+}
+
+.filters-applied .text-base-1 {
+    margin-left: 18px;
 }
