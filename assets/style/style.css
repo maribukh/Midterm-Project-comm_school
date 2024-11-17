@@ -23,6 +23,7 @@ ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     /* justify-content:space-between ; */
     padding: 0;
 }
@@ -255,19 +256,14 @@ aside  {
   }
 
 
-.slide-bar ul {
-    height: 100%;
+  .slide-bar ul {
     min-width: 230px;
-    padding: 0px 0px 28px 0px;
-    border: 1px 0px 0px 0px;
+    padding-bottom: 28px;
     border-top: 1px solid var(--color-gray-300);
-
-
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    align-items: flex-start; 
     text-transform: capitalize;
-    
 }
 
 .right-side {
@@ -427,6 +423,9 @@ div .sort-columns {
 }
 
 .filters-applied ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     background-color: var(--color-gray-100);
     border: none;
     padding-top: 20px;
@@ -474,15 +473,10 @@ div .sort-columns {
 
 
 /* product cards  */
-.product-cards-container{
-    height: 100%;
+.product-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    margin-bottom: 30px;
-
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px
 }
 .product-card {
         width: 100%;
@@ -596,6 +590,7 @@ margin-top: 10px;
 }
 
 .select-box ul {
+    margin-top: 30px;
     display: flex;
     justify-content: flex-end;
     
@@ -664,8 +659,6 @@ margin-top: 10px;
   
   .footer {
     width: 100%;
-    max-width: 100%;
-    height: 100%;
     min-height: 190px;
     display: flex;
     justify-content: center;
@@ -703,14 +696,16 @@ margin-top: 10px;
     min-height: 40px;
     padding: 8px 68px 9px 8px;
     border: 1px solid var(--color-gray-300);
-    border-radius: 6px;
-    text-transform: capitalize;    
+    border-radius: 6px;  
+ 
     /* position: relative; */
   }
 
+
   .email img {
-    /* position: absolute;
-    left: 534px; */
+    position: absolute;
+    left: 534px;
+    bottom: 54px;
   }
 
   .email button {
@@ -760,3 +755,10 @@ text-decoration-skip-ink: none;
 color: var(--color-gray-800);
 
   }
+
+  @media (max-width: 768px) {
+    .header-alibaba, .web-gridview, header {
+        padding: 10px;
+        flex-direction: column;
+    }
+}
