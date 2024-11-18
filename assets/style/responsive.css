@@ -1,5 +1,8 @@
-@media screen and (max-width: 1100px) {
-   
+ @media screen and (max-width: 1100px) {
+   header {
+    max-width: 50%;
+    flex-direction: column;
+   }
   }
   
   @media screen and (max-width: 1024px) {
@@ -9,12 +12,36 @@
   @media screen and (max-width: 920px) {
 
     }
-  }
+
   
   @media screen and (max-width: 768px) {
    
-  }
+  } 
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 360px) {
+    .header-alibaba img {
+        display: none;
+    }
+
+    header {
+        max-width: 360px;
+    }
+
+    .header-alibaba ul {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .container-top {
+        display: none;
+    }
+
+    .product-cards-container {
+        display: flex;
+        flex-direction: column;
+    }
   }
   
