@@ -19,17 +19,11 @@
   } 
   
   @media screen and (max-width: 360px) {
-    .header-alibaba img {
-        display: none;
-    }
 
     header {
         max-width: 360px;
     }
 
-    .header-alibaba ul {
-        display: none;
-    }
 
     aside {
         display: none;

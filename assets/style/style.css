@@ -9,6 +9,7 @@ body {
     font-family: "Inter", sans-serif;
     flex-wrap: wrap;
     background-color: var(--color-gray-100);
+    overflow-x: hidden;
     
 }
 
@@ -38,6 +39,11 @@ h6 {
 
 }
 
+header, .header-alibaba, .web-gridview {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 .web-gridview {
     min-width: 1440px;
