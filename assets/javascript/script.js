@@ -48,8 +48,11 @@ function renderProducts(page) {
           <span class="product_rating">${product.rating}</span>
         </ul>
       </div>
- <p class="product-description">${truncateDescription(product.description, 65)}</p>    </div>
+      <h4 class="product-card__name">${product.title}</h4>
+      <p class="product-description">${truncateDescription(product.description, 35)}</p>
+    </div>
   `;
+  
 
   function truncateDescription(description, maxLength) {
     if (description.length > maxLength) {
@@ -84,4 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
 });
 
+// sorting
+const sortDropdown = document.querySelector('.select-box select');
 
+function sortProducts(criteria) {
+  if (criteria === 'sort by price') {
+    productArrays.sort((a, b) => a.price - b.price);
+  } else if (criteria === 'sort by name') {
+    productArrays.sort((a, b) => a.title.localeCompare(b.title));
+  }
+  renderProducts(currentPage);
+}
+
+sortDropdown.addEventListener('change', (event) => {
+  const selectedOption = event.target.value;
+  sortProducts(selectedOption);
+});
