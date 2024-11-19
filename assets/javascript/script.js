@@ -82,5 +82,6 @@ function generateStars(rating) {
 document.addEventListener('DOMContentLoaded', () => {
   fetchProducts(); 
   
-
 });
+
+
