@@ -45,6 +45,23 @@ header, .header-alibaba, .web-gridview {
   margin: 0 auto;
 }
 
+.burger {
+  display: none;
+  justify-content:center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 3px;
+  position: absolute;
+  left: 700px;
+}
+
+.burger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-dark-100);
+}
+
 .web-gridview {
     min-width: 1440px;
     width: 100%;
@@ -146,6 +163,7 @@ header {
     width: auto;
     color: var(--color-gray-500);
     text-transform: capitalize;
+  
 }
 
 .user-dashboard a {

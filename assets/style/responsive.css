@@ -23,19 +23,5 @@
     header {
         max-width: 360px;
     }
-
-
-    aside {
-        display: none;
-    }
-
-    .container-top {
-        display: none;
-    }
-
-    .product-cards-container {
-        display: flex;
-        flex-direction: column;
-    }
   }
   
