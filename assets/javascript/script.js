@@ -69,7 +69,7 @@ function renderProducts(page) {
 function generateStars(rating) {
   let stars = '';
   const fullStars = Math.floor(rating);
-  const emptyStars = 5 - fullStars;
+  const emptyStars = 5 - fullStars; 
 
   for (let i = 0; i < fullStars; i++) {
     stars += `<li><img src="./assets/icons/star_colored.svg" alt="star"></li>`;
@@ -95,7 +95,10 @@ function sortProducts(criteria) {
     productArrays.sort((a, b) => a.price - b.price);
   } else if (criteria === 'sort by name') {
     productArrays.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (criteria === 'sort by rating') {
+    productArrays.sort((a, b) => b.rating - a.rating);
   }
+  
   renderProducts(currentPage);
 }
 
