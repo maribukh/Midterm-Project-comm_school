@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  outline: 1px solid red;
 }
 
 body {
@@ -63,7 +64,6 @@ header,
 }
 
 .web-gridview {
-  min-width: 1440px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -74,9 +74,9 @@ header,
 
 header {
   width: 100%;
-  min-width: 1440px;
   display: flex;
   justify-content: center;
+  background-color: var(--color-white-100);
 }
 
 .header-alibaba {
@@ -87,7 +87,6 @@ header {
   justify-content: space-between;
   padding: 20px 0px;
   /* padding: 20px 132px 20px 132px; */
-  background-color: var(--color-white-100);
 
 }
 
@@ -324,7 +323,7 @@ label {
 
 .main-container {
   max-width: 100%;
-  width: 81.08%;
+  width: 81.8%;
   margin: auto;
   display: flex;
   margin: 0 auto;
@@ -786,17 +785,20 @@ div .sort-columns {
 }
 
 .e-comm ul {
+  width: 81.8%;
+  margin: auto;
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
-  gap: 749px;
+  justify-content: space-between;
   margin-bottom: 21px;
 }
 
 .e-comm {
+  width: 100%;
   border-top: 1px solid var(--color-gray-300);
   margin-top: 30px;
   padding-top: 23px;
+  display: flex;
 }
 
 .e-comm li {
