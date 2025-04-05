@@ -343,6 +343,8 @@ label {
 }
 
 .container-top ul {
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -645,7 +647,9 @@ div .sort-columns {
 }
 
 .select-box {
+  margin-top: 1rem;
   display: flex;
+  justify-content: flex-end;
 }
 
 .select-box ul {
@@ -722,7 +726,7 @@ div .sort-columns {
 }
 
 .footer {
-  width: 81.8%;
+  width: 100%;
   min-height: 190px;
   display: flex;
   justify-content: center;
@@ -733,6 +737,8 @@ div .sort-columns {
 }
 
 .footer ul {
+  width: 81.8%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
