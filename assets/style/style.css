@@ -19,7 +19,6 @@ a {
 }
 
 ul {
-  width: 100%;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -52,12 +51,11 @@ header,
   align-content: center;
   flex-direction: column;
   gap: 3px;
-  position: absolute;
-  left: 700px;
+  /* position: absolute; */
 }
 
 .burger span {
-  width: 30px;
+  width: 25px;
   height: 3px;
   background-color: var(--color-dark-100);
 }
@@ -78,6 +76,10 @@ header {
   background-color: var(--color-white-100);
 }
 
+.header-alibaba ul {
+  width: 100%;
+}
+
 .header-alibaba {
   width: 81.8%;
   margin: auto;
@@ -88,6 +90,7 @@ header {
   /* padding: 20px 132px 20px 132px; */
 
 }
+
 
 .search {
   max-width: 100%;
@@ -704,7 +707,7 @@ div .sort-columns {
 }
 
 .footer {
-  width: 100%;
+  width: 81.8%;
   min-height: 190px;
   display: flex;
   justify-content: center;
@@ -769,7 +772,6 @@ div .sort-columns {
 }
 
 .e-comm ul {
-  width: 81.8%;
   margin: auto;
   display: flex;
   flex-direction: row;
