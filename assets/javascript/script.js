@@ -115,7 +115,6 @@ sortDropdown.addEventListener("change", (event) => {
   sortProducts(selectedOption);
 });
 
-
 // search functional
 function search(value) {
   let filltered_products = productArrays.filter((x) =>
@@ -131,38 +130,48 @@ let cart = [];
 
 function addToCart(title, price) {
   cart.push({ title, price });
+
   displayCart();
 }
 
 function displayCart() {
-  const cartItems = document.getElementById("cartItems");
-  const itemCount = document.getElementById("itemCount");
-  const totalPriceElem = document.getElementById("totalPrice");
-
-  cartItems.innerHTML = "";
+  let cartItems = document.getElementById("cartItems");
   let totalPrice = 0;
 
-  cart.forEach((item, index) => {
-    const li = document.createElement("li");
-    li.textContent = `${item.title} - ${item.price} ₾`;
+  cartItems.innerHTML = "";
 
-    const del = document.createElement("span");
-    del.textContent = " ⨉";
-    del.style.cursor = "pointer";
+  cart.forEach((item, index) => {
+    let li = document.createElement("li");
+    let del = document.createElement("span");
+    del.textContent = "⨉";
     del.style.color = "red";
-    del.onclick = () => delItem(index);
+    del.style.margin = "0.5rem";
+    li.textContent = `${item.title} - ${item.price}  ლარი `;
 
     li.appendChild(del);
     cartItems.appendChild(li);
+    del.onclick = function () {
+      delitem(index);
+    };
 
-    totalPrice += parseFloat(item.price);
+    totalPrice += parseInt(item.price);
   });
 
-  itemCount.textContent = cart.length;
-  totalPriceElem.textContent = totalPrice.toFixed(2);
-}
+  console.log(totalPrice);
 
+  document.getElementById("totalPrice").textContent = totalPrice;
+}
 function delItem(index) {
   cart.splice(index, 1);
   displayCart();
+}
+
+function toggleCartDetails() {
+  let cartItems = document.getElementById("cartItems");
+
+  if (cartItems.style.display === "none" || cartItems.style.display === "") {
+    cartItems.style.display = "block";
+  } else {
+    cartItems.style.display = "none";
+  }
 }
