@@ -146,7 +146,7 @@ function displayCart() {
     del.textContent = "⨉";
     del.style.color = "red";
     del.style.margin = "0.5rem";
-    li.textContent = `${item.title} - ${item.price}  ლარი `;
+    li.textContent = `${item.title} - ${item.price}  $ `;
 
     li.appendChild(del);
     cartItems.appendChild(li);

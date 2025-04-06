@@ -533,6 +533,12 @@ div .sort-columns {
   align-items: center;
 
   margin-top: 28px;
+  transition: 1s;
+
+}
+
+.product-card .image img:hover {
+  transform: scale(1.05);
 }
 
 /* product cards descriptions  */
@@ -550,11 +556,12 @@ div .sort-columns {
   margin-top: 17px;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .add-to-cart {
   position: absolute;
-  right: 8px;
+  right: 16px;
   bottom: 4px;
   padding: 6px 12px;
   font-size: 14px;
@@ -568,7 +575,7 @@ div .sort-columns {
 }
 
 .add-to-cart:hover {
-  transform: scale(1.2s);
+  background-color: var(--color-orange-100);
 }
 
 .cart ul {
@@ -576,10 +583,14 @@ div .sort-columns {
   border-radius: 0.5rem;
 }
 
+.color {
+  color: var(--primary-color);
+}
+
 
 .cartPopup {
   position: absolute;
-  right: 0px;
+  right: 80px;
   /* top: 60px; */
   background-color: white;
   border: 1px solid #ddd;
@@ -589,6 +600,10 @@ div .sort-columns {
   width: 300px;
   z-index: 1000;
   display: none;
+}
+
+.cart ul {
+  width: 18% !important;
 }
 
 .cartPopup li {
