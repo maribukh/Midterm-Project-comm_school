@@ -133,6 +133,40 @@
   .footer {
     width: 100%;
   }
+
+  .email {
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+
+  .email li {
+    width: 100%;
+    margin: auto;
+  }
+
+  .email input {
+    min-width: 100%;
+  }
+
+  .email button {
+    width: 100%;
+    margin-left: 0px !important;
+    margin-top: 1rem;
+  }
+
+  .e-comm {
+    flex-wrap: wrap;
+  }
+
+  .e-comm ul {
+    flex-direction: column;
+  }
+
+  .e-comm .languages {
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 360px) {
@@ -224,42 +258,12 @@
   }
 
   .text-base-1 {
-    display: none !importantgit;
+    display: none !important;
 
   }
-  
-    .product-description {
-      margin: 0;
-    }
 
-  .email {
-    width: 100%;
-    margin-top: 1rem;
-    flex-direction: column;
-  }
-
-
-  .email li {
-    width: 100%;
-    margin: auto;
-  }
-
-  .email button {
-    width: 100%;
-    margin-left: 0px !important;
-    margin-top: 1rem;
-  }
-
-  .e-comm {
-    flex-wrap: wrap;
-  }
-
-  .e-comm ul {
-    flex-direction: column;
-  }
-
-  .e-comm .languages {
-    margin-top: 1rem;
+  .product-description {
+    margin: 0;
   }
 
 
