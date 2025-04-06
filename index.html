@@ -24,9 +24,9 @@
         
         <!-- search form -->
         <li class="search">
-          <input oninput="search(this.value)" type="search" placeholder="search"/>
-          <form>
-            <div class="custom-select">
+            <form>
+          <input  type="search" placeholder="search"/>
+           <div class="custom-select">
               <select>
                 <option>all category</option>
                 <option>mobile accessory</option>
@@ -35,10 +35,10 @@
                 <option>modern tech</option>
               </select>
             </div>
+             <button onclick="search(document.querySelector('.search input').value)">search</button>
+
           </form>
-          
-          <button onclick="search(this.value)">search</button>
-        </li>
+                 </li>
 
         <!-- user dashboard -->
         <li class="user-dashboard">

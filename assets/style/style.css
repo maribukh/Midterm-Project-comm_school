@@ -44,6 +44,10 @@ header,
   margin: 0 auto;
 }
 
+form {
+  display: flex;
+}
+
 .burger {
   display: none;
   justify-content: center;
@@ -564,7 +568,7 @@ div .sort-columns {
 }
 
 .add-to-cart:hover {
-  background-color: var(--primary-color-dark);
+  transform: scale(1.2s);
 }
 
 .discount {
