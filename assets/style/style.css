@@ -215,7 +215,6 @@ aside {
 }
 
 .text-base {
-  /* height: 36px; */
   /* margin-bottom: 17px; */
   font-size: 16px !important;
   font-weight: 400;
@@ -231,6 +230,12 @@ aside {
   align-content: center;
 
 }
+
+/* form {
+  height: 48px;
+  display: flex;
+  align-items: center;
+} */
 
 .category .text-base {
   margin-bottom: 17px;
@@ -590,8 +595,12 @@ div .sort-columns {
   position: absolute;
   top: 20px;
   right: 28px;
+  transition: 1.2s;
 }
 
+.favorite:hover {
+    border: 1px solid var(--primary-color);
+}
 .product_rating {
   font-size: 16px;
   font-weight: 400;
@@ -650,7 +659,6 @@ div .sort-columns {
 }
 
 .select-box {
-  margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
 }
