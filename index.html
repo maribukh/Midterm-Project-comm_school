@@ -24,7 +24,7 @@
         
         <!-- search form -->
         <li class="search">
-          <input type="search" placeholder="search"/>
+          <input oninput="search(this.value)" type="search" placeholder="search"/>
           <form>
             <div class="custom-select">
               <select>
@@ -37,16 +37,16 @@
             </div>
           </form>
           
-          <button>search</button>
+          <button onclick="search(this.value)">search</button>
         </li>
 
         <!-- user dashboard -->
         <li class="user-dashboard">
-          <a href="#"><img src="./assets/icons/profile_vector.svg" alt="Profile">profile</a>
-          <a href="#"><img src="./assets/icons/message_vector.svg" alt="Message">message</a>
-          <a href="#"><img class="orders" src="./assets/icons/orders_vector.svg" alt="Orders">orders</a>
+          <a href="#"><img src="./assets/icons/profile_vector.svg" alt="Profile"><p>profile</p></a>
+          <a href="#"><img src="./assets/icons/message_vector.svg" alt="Message"><p>message</p></a>
+          <a href="#"><img class="orders" src="./assets/icons/orders_vector.svg" alt="Orders"><p>orders</p></a>
           <div class="cart" id="cartItems">
-          <a href="#"><img src="./assets/icons/cart.svg" alt="Cart">my cart</a>
+          <a href="#"><img src="./assets/icons/cart.svg" alt="Cart"><p>my cart</p></a>
           </div>
         </li>
       </ul>
@@ -238,7 +238,6 @@
   </ul>
 </footer>
   <script src="./assets/javascript/script.js"></script>
-  <script src="./assets/javascript/data.js"></script>
 </div>
 </body>
 </html>

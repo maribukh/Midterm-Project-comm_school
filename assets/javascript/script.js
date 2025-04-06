@@ -115,6 +115,18 @@ sortDropdown.addEventListener("change", (event) => {
   sortProducts(selectedOption);
 });
 
+
+// search functional
+function search(value) {
+  let filltered_products = productArrays.filter((x) =>
+    x.description.toLowerCase().includes(value.toLowerCase())
+  );
+
+  renderProducts(filltered_products);
+}
+
+// add to cart functional
+
 let cart = [];
 
 function addToCart(title, price) {
@@ -137,6 +149,7 @@ function displayCart() {
     const del = document.createElement("span");
     del.textContent = " ⨉";
     del.style.cursor = "pointer";
+    del.style.color = "red";
     del.onclick = () => delItem(index);
 
     li.appendChild(del);
@@ -149,9 +162,7 @@ function displayCart() {
   totalPriceElem.textContent = totalPrice.toFixed(2);
 }
 
-
 function delItem(index) {
   cart.splice(index, 1);
   displayCart();
 }
-
