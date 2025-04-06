@@ -13,35 +13,27 @@
   <div class="web-gridview">
   <header>
     <div class="header-alibaba">
-      
       <ul>
         <li><a href="#"><img src="./assets/images/logo/logo-colored.svg" alt="Logo"></a></li>
-        <li><div class="burger">
+        <li class="burger">
         <span></span>
         <span></span>
         <span></span>
-      </div></li>
-        
+      </li>  
         <!-- search form -->
-        <li class="search">
-            <form>
+            <form class="search">
           <input  type="search" placeholder="search"/>
-           <div class="custom-select">
-              <select>
+              <select  class="custom-select">
                 <option>all category</option>
                 <option>mobile accessory</option>
                 <option>electronics</option>
                 <option>smartphones</option>
                 <option>modern tech</option>
               </select>
-            </div>
              <button onclick="search(document.querySelector('.search input').value)">search</button>
-
           </form>
-                 </li>
-
         <!-- user dashboard -->
-        <li class="user-dashboard">
+        <div class="user-dashboard">
           <a href="#"><img src="./assets/icons/profile_vector.svg" alt="Profile"><p>profile</p></a>
           <a href="#"><img src="./assets/icons/message_vector.svg" alt="Message"><p>message</p></a>
           <a href="#"><img class="orders" src="./assets/icons/orders_vector.svg" alt="Orders"><p>orders</p></a>
@@ -50,7 +42,7 @@
           <ul id="cartItems" class="cartPopup"></ul>
           </div>
            <h3 class="color"><span id="totalPrice">0</span>$</h3>
-        </li>
+        </div>
       </ul>
     </div>
   </header>
@@ -125,34 +117,24 @@
     <div class="container-top">
       <ul>
         <li class="text-base"><p>12,911 items in <span class="title-h6">Mobile accessory</span></p></li>
-       
-        <div class="group-1">
-          <li class="text-base">
+        <div class="group-1 text-base">
+        
             <input type="checkbox" id="Verified only" name="Verified only">
             <label  for="Verified only">Verified only</label>
-          </li>
-          <li class="text-base"> 
-            <form>
-            <div class="select-box">
+            <form class="select-box">
               <select>
                 <option>featured</option>
                 <option>sort by price</option>
                 <option>sort by name</option>
                 <option>sort by rating</option>
               </select>
-            </div>
           </form>
-        </li>
-        <div class="sort-4th">
-          <li>
+          <li class="sort-4th">
           <img src="./assets/icons/sort-4th.svg">
           </li>
-        </div>
-        <div class="sort-columns">
-          <li>
+          <li class="sort-columns">
             <img src="./assets/icons/sort-columns.svg">
-          </li>
-        </div>
+          </li>  
       </div>
       </ul>
     </div>
@@ -180,7 +162,7 @@
             </button>
         </form>        
         <li class="text-base-1">
-          Clear all filter
+          <p>Clear all filter</p>
         </li>
       </ul>
     </div>
@@ -218,7 +200,6 @@
     <li><h4 class="title-h4">Subscribe on our newsletter</h4></li>
     <li class="title-info">Subscribe on our newsletter</li>
     <li class="email">
-      <!-- <img src="./assets/icons/email.svg"> -->
       <input type="email" placeholder="Email">
       <ul>
         <li>

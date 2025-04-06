@@ -186,11 +186,6 @@ header {
   margin-bottom: 10px;
 }
 
-.user-dashboard li {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-}
 
 /*aside bar */
 
@@ -603,31 +598,22 @@ div .sort-columns {
 }
 
 .cart ul {
-  width: 18% !important;
+  width: 20% !important;
 }
 
 .cartPopup li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
   font-size: 14px;
   border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 8px;
+  padding: 8px;
 }
 
 .cartPopup li:last-child {
   border-bottom: none;
 }
 
-.cartPopup .item-info {
-  flex-grow: 1;
-}
-
-.cartPopup .item-price {
-  font-weight: 600;
-  color: #333;
-}
 
 
 .cartPopup h4 {

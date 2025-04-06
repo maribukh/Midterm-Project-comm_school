@@ -140,27 +140,35 @@ function displayCart() {
 
   cartItems.innerHTML = "";
 
+  if (cart.length === 0) {
+    cartItems.innerHTML = "<li>Cart is empty</li>";
+    document.getElementById("totalPrice").textContent = 0;
+    return;
+  }
+
   cart.forEach((item, index) => {
     let li = document.createElement("li");
     let del = document.createElement("span");
     del.textContent = "⨉";
     del.style.color = "red";
     del.style.margin = "0.5rem";
-    li.textContent = `${item.title} - ${item.price}  $ `;
+    del.style.cursor = "pointer";
 
+    li.textContent = `${item.title} - ${item.price} $ `;
     li.appendChild(del);
+
     cartItems.appendChild(li);
+
     del.onclick = function () {
-      delitem(index);
+      delItem(index);
     };
 
     totalPrice += parseInt(item.price);
   });
 
-  console.log(totalPrice);
-
   document.getElementById("totalPrice").textContent = totalPrice;
 }
+
 function delItem(index) {
   cart.splice(index, 1);
   displayCart();
