@@ -4,6 +4,11 @@ let currentPage = 1;
 const itemsPerPage = 9;
 let productArrays = [];
 
+function prodactfilter(pageNumber) {
+  currentPage = pageNumber;
+  renderProducts(currentPage);
+}
+
 async function fetchProducts() {
   try {
     const response = await fetch(
@@ -23,7 +28,6 @@ function renderProducts(page) {
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-
   const productsToDisplay = productArrays.slice(startIndex, endIndex);
 
   productsToDisplay.forEach((product) => {
@@ -59,9 +63,9 @@ function renderProducts(page) {
           product.description,
           35
         )}</p>
-        <button class="add-to-cart" onclick="addToCart('${product.title}', ${
+        <button class="add-to-cart" onclick="addToCart('${product.title}', '${
       product.price
-    })">Add To Cart</button>
+    }','${product.images[0]}')">Add To Cart</button>
       </div>
     `;
 
@@ -72,6 +76,21 @@ function renderProducts(page) {
     return description.length > maxLength
       ? description.substring(0, maxLength) + "..."
       : description;
+  }
+
+  let divp = document.getElementById("pid");
+  divp.innerHTML = ""; 
+
+  for (let i = 0; i < Math.ceil(productArrays.length / itemsPerPage); i++) {
+    let sp = document.createElement("span");
+    sp.className = "page-number";
+    sp.textContent = i + 1;
+
+    sp.addEventListener("click", () => {
+      prodactfilter(i + 1);
+    });
+
+    divp.appendChild(sp);
   }
 }
 
@@ -128,9 +147,8 @@ function search(value) {
 
 let cart = [];
 
-function addToCart(title, price) {
-  cart.push({ title, price });
-
+function addToCart(title, price, images) {
+  cart.push({ title, price, images });
   displayCart();
 }
 
@@ -148,13 +166,19 @@ function displayCart() {
 
   cart.forEach((item, index) => {
     let li = document.createElement("li");
+    let img = document.createElement("img");
     let del = document.createElement("span");
+    console.log(cart[index]);
+    img.src = item.images;
+    img.style.height = "40px";
+
     del.textContent = "⨉";
     del.style.color = "red";
     del.style.margin = "0.5rem";
     del.style.cursor = "pointer";
 
     li.textContent = `${item.title} - ${item.price} $ `;
+    li.appendChild(img);
     li.appendChild(del);
 
     cartItems.appendChild(li);
