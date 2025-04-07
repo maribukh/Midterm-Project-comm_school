@@ -25,7 +25,6 @@ function renderProducts(page) {
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-
   const productsToDisplay = productArrays.slice(startIndex, endIndex);
 
   productsToDisplay.forEach((product) => {
