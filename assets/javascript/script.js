@@ -133,13 +133,60 @@ function sortProducts(criteria) {
   renderProducts(currentPage);
 }
 
-
 sortDropdown.addEventListener("change", (event) => {
   const selectedOption = event.target.value;
   sortProducts(selectedOption);
 });
 
 // search functional
+function renderSearchedProducts(products) {
+  productContainer.innerHTML = "";
+
+  products.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.classList.add("product-card");
+
+    productCard.innerHTML = `
+      <div class="image">
+        <img src="${product.images[0]}" alt="${
+      product.title
+    }" class="product-card__image">
+      </div>
+      <div class="product-info">
+        <div class="product-card__prices">
+          <h5 class="title-h5">$${product.price}</h5>
+          ${
+            product.discountPercentage > 0
+              ? `<span class="discount">${product.discountPercentage}% OFF</span>`
+              : ""
+          }
+        </div>
+        <div class="favorite">
+          <img src="./assets/icons/favorite_border.svg" alt="favorite">
+        </div>
+        <div class="rating">
+          <ul>
+            ${generateStars(product.rating)}
+            <span class="product_rating">${product.rating}</span>
+          </ul>
+        </div>
+        <h4 class="product-card__name">${product.title}</h4>
+        <p class="product-description">${truncateDescription(
+          product.description,
+          35
+        )}</p>
+        <button class="add-to-cart" onclick="addToCart('${product.title}', '${
+      product.price
+    }','${product.images[0]}')">Add To Cart</button>
+      </div>
+    `;
+
+    productContainer.appendChild(productCard);
+  });
+
+  document.getElementById("pid").innerHTML = "";
+}
+
 function search(value) {
   let filltered_products = productArrays.filter((x) =>
     x.description.toLowerCase().includes(value.toLowerCase())
