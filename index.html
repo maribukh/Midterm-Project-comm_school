@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./assets/style/style.css" />
   <link rel="stylesheet" href="./assets/style/responsive.css">
 </head>
-<body>
+<body >
   <div class="web-gridview">
   <header>
     <div class="header-alibaba">
@@ -37,8 +37,8 @@
           <a href="#"><img src="./assets/icons/profile_vector.svg" alt="Profile"><p>profile</p></a>
           <a href="#"><img src="./assets/icons/message_vector.svg" alt="Message"><p>message</p></a>
           <a href="#"><img class="orders" src="./assets/icons/orders_vector.svg" alt="Orders"><p>orders</p></a>
-          <div class="cart" onclick="toggleCartDetails()">
-          <a href="#"><img src="./assets/icons/cart.svg" alt="Cart"><p>my cart</p></a>
+          <div class="cart">
+          <a href="#" onclick="toggleCartDetails()"><img   src="./assets/icons/cart.svg" alt="Cart"><p>my cart</p></a>
           <ul id="cartItems" class="cartPopup"></ul>
           </div>
            <h3 class="color"><span id="totalPrice">0</span>$</h3>
@@ -181,10 +181,8 @@
         <button class="pagination-prev">
           <img src="./assets/icons/chevron-left.svg" alt="left">
         </button>
-        <div class="pagination-numbers">
-          <span class="page-number">1</span>
-          <span class="page-number">2</span>
-          <span class="page-number">3</span>
+        <div class="pagination-numbers" id="pid">
+          
         </div>
         <button class="pagination-next">
           <img src="./assets/icons/chevron-right.svg">
