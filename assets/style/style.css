@@ -36,9 +36,9 @@ h6 {
 
 }
 
-header,
 .header-alibaba,
-.web-gridview {
+.footer,
+.main-container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -197,6 +197,7 @@ aside {
 }
 
 .title-h6 {
+  width: 100%;
   height: 48px;
   font-size: 16px;
   font-weight: 600;
@@ -210,8 +211,6 @@ aside {
 
 .title-h6 img {
   cursor: pointer;
-  position: absolute;
-  left: 344px;
 }
 
 .text-base {
@@ -237,7 +236,9 @@ aside {
   align-items: center;
 } */
 
-.category .text-base {
+.category .text-base,
+.brands .text-base,
+.features .text-base {
   margin-bottom: 17px;
 }
 
@@ -326,7 +327,6 @@ label {
 
 
 .main-container {
-  max-width: 100%;
   width: 81.8%;
   margin: auto;
   display: flex;

@@ -121,14 +121,17 @@
         
             <input type="checkbox" id="Verified only" name="Verified only">
             <label  for="Verified only">Verified only</label>
-            <form class="select-box">
-              <select>
-                <option>featured</option>
-                <option>sort by price</option>
-                <option>sort by name</option>
-                <option>sort by rating</option>
-              </select>
-          </form>
+          <div class="select-box">
+            <select onchange="sortProducts(this.value)">
+              <option value="">Sort</option>
+              <option value="price-asc">Price ↑</option>
+              <option value="price-desc">Price ↓</option>
+              <option value="name">Name A–Z</option>
+              <option value="rating-asc">Rating ↑</option>
+              <option value="rating-desc">Rating ↓</option>
+            </select>
+</div>
+
           <li class="sort-4th">
           <img src="./assets/icons/sort-4th.svg">
           </li>
@@ -182,7 +185,7 @@
           <img src="./assets/icons/chevron-left.svg" alt="left">
         </button>
         <div class="pagination-numbers" id="pid">
-        
+        <!-- here is pages -->
         </div>
         <button class="pagination-next">
           <img src="./assets/icons/chevron-right.svg">

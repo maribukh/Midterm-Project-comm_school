@@ -77,9 +77,9 @@ function renderProducts(page) {
       ? description.substring(0, maxLength) + "..."
       : description;
   }
-
+  // add functional of pagination
   let divp = document.getElementById("pid");
-  divp.innerHTML = ""; 
+  divp.innerHTML = "";
 
   for (let i = 0; i < Math.ceil(productArrays.length / itemsPerPage); i++) {
     let sp = document.createElement("span");
@@ -118,16 +118,21 @@ document.addEventListener("DOMContentLoaded", () => {
 const sortDropdown = document.querySelector(".select-box select");
 
 function sortProducts(criteria) {
-  if (criteria === "sort by price") {
+  if (criteria === "price-asc") {
     productArrays.sort((a, b) => a.price - b.price);
-  } else if (criteria === "sort by name") {
+  } else if (criteria === "price-desc") {
+    productArrays.sort((a, b) => b.price - a.price);
+  } else if (criteria === "name") {
     productArrays.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (criteria === "sort by rating") {
+  } else if (criteria === "rating-asc") {
+    productArrays.sort((a, b) => a.rating - b.rating);
+  } else if (criteria === "rating-desc") {
     productArrays.sort((a, b) => b.rating - a.rating);
   }
 
   renderProducts(currentPage);
 }
+
 
 sortDropdown.addEventListener("change", (event) => {
   const selectedOption = event.target.value;
